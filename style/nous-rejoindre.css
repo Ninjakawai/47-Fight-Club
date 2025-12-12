@@ -1,0 +1,595 @@
+/********GLOBAL & RESET********/
+@import url("https://fonts.googleapis.com/css2?family=Manufacturing+Consent&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* Supprimé : margin: 0; padding: 0; (déplacé dans *) */
+  overflow-x: hidden; /* Déplacé d'un bloc séparé */
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: black;
+  font-family: sans-serif; /* Sera écrasé par * */
+  min-height: 100vh;
+  /* Styles déplacés du bas */
+  background-image: url(../NousRejoindre/R.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  font-size: 1.5em;
+}
+
+section {
+  padding: 50px 0px;
+  width: 100%; /* Déplacé de main img, section, footer */
+}
+
+body,
+header a,
+.link-btn_red,
+.container-main,
+.container-team button,
+.proff:hover small,
+footer nav ul li a {
+  color: #fff;
+}
+
+/********HEADER********/
+
+.header-mobile {
+  display: none;
+  padding: 50px;
+  z-index: 5;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: black;
+  gap: 100px;
+  justify-content: start;
+  /* Regroupement des propriétés de .header-mobile et ses enfants */
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-mobile:target {
+  display: flex;
+}
+
+.header-mobile ul {
+  /* Regroupement des propriétés de .header-mobile ul */
+  gap: 50px;
+  font-size: 30px;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.header-mobile nav {
+  height: auto;
+  justify-content: right;
+  font-size: 35px;
+}
+
+.header-mobile ul a {
+  color: #fff;
+}
+
+header {
+  z-index: 2;
+  background-color: black;
+  top: 0;
+  margin-top: 0;
+  position: sticky;
+  height: 78px;
+  /* Regroupement des propriétés de header, .container-logo, ul, .social-proff, .proff, .card_links */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav,
+.container-logo {
+  height: 100%;
+}
+
+.container-logo img {
+  height: 90%;
+}
+
+header a {
+  text-decoration: none;
+  list-style: none;
+  font-size: 18px;
+}
+
+nav ul li a {
+  display: inline-block;
+  border-bottom: 5px solid transparent;
+  transition: 200ms; /* Déplacé de la liste card button, etc. */
+}
+
+.header-burger_icon {
+  display: none;
+}
+
+.container-footer_links i,
+.card i {
+  cursor: pointer;
+}
+
+nav ul li a:hover {
+  transform: translateY(-5px);
+  border-bottom-color: red;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+}
+
+.container-logo {
+  gap: 25px;
+}
+
+nav ul {
+  gap: 40px;
+}
+
+.nav-title_links,
+footer .container-logo a {
+  color: #ff0004;
+  font-weight: bolder;
+  font-size: 35px;
+  font-family: "Manufacturing Consent", system-ui; /* Regroupé depuis main h1, .nav-title_links, etc. */
+}
+
+.link-btn_red {
+  background-color: #ff0004;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+/********MAIN********/
+
+main {
+  padding: 50px;
+  position: relative;
+  overflow: hidden;
+  /* Regroupement de main et .container-main */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  width: 100%; /* Déplacé de main img, section, footer */
+}
+
+#main {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+main::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url(R.jpg);
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  filter: grayscale(0);
+  animation: bgReveal 1s ease-out forwards;
+  z-index: -1;
+}
+
+@keyframes bgReveal {
+  0% {
+    opacity: 0;
+    filter: grayscale(0);
+  }
+  100% {
+    opacity: 1;
+    filter: grayscale(1);
+  }
+}
+
+.container-main {
+  max-width: 1200px;
+  padding: 30px;
+  background-color: rgba(0, 0, 0, 0.82);
+  width: 700px;
+  /* Regroupement de .container-main et .container-main_btn */
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+}
+
+.card button,
+.proff,
+.img-wrapper img {
+  transition: 200ms;
+}
+
+.container-main_btn {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+main h1 {
+  color: #ff0004;
+  font-size: 60px;
+}
+
+.btn-border_red {
+  background-color: transparent;
+  color: #ff0004;
+  border: 1px solid #ff0004;
+  border-radius: 10px;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+main img {
+  width: 100%;
+}
+
+/********STYLES SPÉCIFIQUES "NOUS REJOINDRE"********/
+
+h1{
+    /* La couleur était déjà définie pour main h1, mais ici on la laisse pour les autres h1 */
+    color: red;
+    font-size: 2em; /* Déplacé d'un bloc h1 du bas */
+}
+
+#haut{
+    display: flex;
+    min-height: 50vh;
+    padding: 0;
+    margin: 5% 1% 1% 1%;
+    background-color: rgba(0, 0, 0, 0.716);
+}
+
+#bas{
+    display: flex;
+    min-height: 50vh;
+    max-height: 30vh; /* Retiré de @media 1250px et fusionné */
+    padding: 0;
+    margin: 1% 1% 1% 1%;
+    background-color: rgba(0, 0, 0, 0.716);
+    justify-content: center;
+    align-items: center;
+}
+
+#imageBas{
+    width: 50%;
+    height: auto;
+}
+
+#imageBasDroite{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#gaucheHaut{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10%;
+}
+
+#droiteHaut{
+    width: 50%;
+    min-height: 300px; /* Déplacé de @media 1421px et fusionné */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+}
+
+.txt{
+    width: 100%;
+    text-align: center;
+}
+
+.txtInfo{
+    width: 100%;
+    font-size: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+#butContact{
+    background-color: red;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 10px;
+    width: 35%;
+    height: 15%;
+    font-size: 1em;
+}
+
+/********MEDIA QUERIES********/
+
+@media screen and (max-width: 1600px) {
+
+    #cmtNousRej {
+        font-size: 1.6em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    #droiteHaut{
+        width: 70%;
+        height: 80%;
+        min-height: 300px;
+    }
+}
+@media screen and (max-width: 1421px) {
+
+    #cmtNousRej {
+        font-size: 1.7em;
+    }
+
+    /* p { font-size: 1em; } -> Déjà défini à 1600px */
+
+    #droiteHaut{
+        width: 70%;
+        height: 80%;
+        /* min-height: 300px; -> Déjà défini à 1600px */
+    }
+}
+@media screen and (max-width: 1250px) {
+
+    h1 {
+        font-size: 2em;
+    }
+
+    /* p { font-size: 1em; } -> Déjà défini à 1600px */
+
+    /* #droiteHaut styles -> Déjà définis à 1600px */
+
+    /* #bas{ max-height: 30vh; } -> Déplacé dans #bas général car c'est la valeur par défaut max */
+}
+
+@media screen and (max-width: 1100px) {
+  .container-main {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 1079px) {
+  footer nav {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 1056px) {
+
+    /* html{ overflow-x: hidden; } -> Déplacé dans html général */
+
+    /* h1 { font-size: 2em; } -> Déjà défini à 1250px */
+
+    #cmtNousRej {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 0.8em;
+    }
+
+    #haut, #bas{
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+
+    #droiteHaut{
+        width: 100%;
+        height: auto;
+    }
+
+    #gaucheHaut{
+        width: 100%;
+        height: auto;
+    }
+
+    #imageBas{
+        height: auto;
+    }
+
+    #bas{
+       gap: 20px;
+       /* max-height: 30vh; -> Déjà défini dans #bas */
+    }
+
+    #droiteHaut iframe {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    min-height: 300px;
+    }
+
+    #butContact{
+        font-size: 0.8em;
+    }
+}
+
+@media screen and (max-width: 840px) {
+  header nav ul {
+    display: none;
+  }
+
+  .container-info p {
+    border-radius: 10px;
+    background: #ff00003d;
+    padding: 15px;
+  }
+
+  .event-img {
+    width: 100%;
+    max-width: 380px;
+  }
+
+  .header-burger_icon {
+    display: flex;
+    font-size: 30px;
+    color: #ff0004;
+  }
+
+  main {
+    padding: 0;
+  }
+
+  main img {
+    display: none;
+  }
+
+  .container-calendar {
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .event-info {
+    max-width: 380px;
+  }
+
+  .container-event .event-img {
+    width: 100%;
+  }
+
+  container-event_profile img {
+    width: auto;
+  }
+
+  .stats {
+    gap: 25px;
+  }
+
+  .container-footer,
+  footer nav {
+    gap: 20px;
+  }
+
+  footer nav ul {
+    flex-wrap: wrap;
+  }
+
+  .stats,
+  .container-info,
+  .container-team,
+  .social-proff,
+  .container-footer,
+  footer nav,
+  .contact-info_row,
+  .contact,
+  .calendar,
+  /* Regroupement des flex-direction: column */
+  .contact,
+  .social-proff {
+    flex-direction: column;
+  }
+
+  .social-proff .proff {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 460px) {
+    #cmtNousRej{
+        font-size: 1.5em;
+    }
+}
+
+/********FOOTER********/
+footer {
+  margin: 0 auto;
+  flex-direction: column;
+  display: flex;
+  gap: 15px;
+  padding-bottom: 50px;
+  width: 100%;
+}
+
+footer nav {
+  width: 100%;
+}
+
+footer nav ul {
+  transform: translateY(5px);
+}
+
+footer .line {
+  height: 2px;
+  width: 100%;
+  background-color: #ff0004;
+}
+
+.container-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container-footer_links {
+  font-size: 20px;
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  color: #ff0004;
+}
+
+.arrow-up {
+  padding: 5px;
+  background-color: red;
+  color: black;
+  border-radius: 100%;
+  font-size: 12px;
+}
+
+.arrow-up i {
+  animation: arrow_up 500ms infinite alternate-reverse linear;
+}
+
+@keyframes arrow_up {
+  from {
+    transform: translateY(1px);
+  }
+
+  to {
+    transform: translateY(-1px);
+  }
+}

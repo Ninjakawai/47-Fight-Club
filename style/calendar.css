@@ -1,0 +1,296 @@
+@import url("https://fonts.googleapis.com/css2?family=Manufacturing+Consent&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: black;
+}
+
+footer {
+  flex-direction: column;
+  display: flex;
+  gap: 15px;
+  padding: 0 2em 50px;
+  height: 152px;
+  margin-top: 1em;
+}
+
+header {
+  z-index: 2;
+  margin-top: 0;
+  position: sticky;
+  top: 0;
+  height: 78px;
+  border-bottom: 1px solid red;
+  padding-bottom: 0px;
+  backdrop-filter: blur(10px);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 2em;
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin-bottom: 8px;
+}
+
+header a {
+  text-decoration: none;
+  list-style: none;
+  font-size: 18px;
+}
+
+.header-mobile {
+  display: none;
+  padding: 50px;
+  z-index: 5;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: black;
+  gap: 100px;
+  justify-content: start;
+}
+
+.header-mobile:target {
+  display: flex;
+}
+
+.header-mobile ul {
+  gap: 50px;
+  font-size: 30px;
+}
+
+.header-mobile nav {
+  height: auto;
+  justify-content: right;
+  font-size: 35px;
+}
+
+.header-mobile {
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-mobile ul {
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+.header-mobile ul {
+  justify-content: center;
+}
+
+.header-mobile ul a {
+  color: #fff;
+}
+
+nav ul li a {
+  display: inline-block;
+  border-bottom: 5px solid transparent;
+  transition: 200ms;
+}
+
+nav ul {
+  gap: 40px;
+}
+
+footer nav {
+  width: 90%;
+}
+
+body,
+header a,
+.link-btn_red,
+footer nav ul li a {
+  color: #fff;
+}
+
+nav,
+.container-logo {
+  height: 100%;
+}
+
+.container-logo img {
+  height: 90%;
+  min-height: 5em;
+  padding-bottom: 1em;
+  aspect-ratio: calc(375 / 533);
+}
+
+.container-footer_links i {
+  cursor: pointer;
+}
+
+nav ul li a:hover {
+  transform: translateY(-5px);
+  border-bottom-color: red;
+}
+
+header,
+.container-logo,
+ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-logo {
+  gap: 25px;
+}
+
+.nav-title_links,
+footer .container-logo a {
+  color: #ff0004;
+  font-weight: bolder;
+  font-size: 35px;
+}
+
+.link-btn_red {
+  background-color: #ff0004;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+footer .line {
+  border: 1px solid red;
+}
+
+.container-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container-footer_links {
+  font-size: 20px;
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  color: #ff0004;
+}
+
+.arrow-up {
+  padding: 5px;
+  background-color: red;
+  color: black;
+  border-radius: 100%;
+  font-size: 12px;
+}
+
+.arrow-up i {
+  animation: arrow_up 500ms infinite alternate-reverse linear;
+}
+
+@keyframes arrow_up {
+  from {
+    transform: translateY(1px);
+  }
+  to {
+    transform: translateY(-1px);
+  }
+}
+summary {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.redFont {
+  color: red;
+}
+
+.event-mouseover-animation {
+  border: 4px red solid;
+}
+
+.fc {
+  color: red;
+  font-weight: bold;
+}
+
+.fc-toolbar {
+  margin-top: 1.5em;
+  padding: 0 1em;
+}
+
+.fc-toolbar-title {
+  margin-left: 8px;
+  margin-right: 8px;
+  color: white;
+}
+
+.fc .fc-list-sticky .fc-list-day > * {
+  border: 1px solid black;
+}
+
+.fc-theme-standard .fc-list-day-cushion {
+  background: red;
+  color: black;
+  border: 1px solid black;
+}
+
+.fc-toolbar-title,
+.fc .fc-col-header-cell-cushion,
+.fc-multimonth-title {
+  text-transform: capitalize;
+}
+
+.fc div.fc-multimonth-month div.fc-multimonth-header,
+.fc-multimonth-month .fc-multimonth-daygrid {
+  background-color: black;
+}
+
+.fc .fc-multimonth-multicol div.fc-multimonth-month {
+  padding: 0 0.6em 1.2em;
+}
+
+#evtImg {
+  width: 100%;
+}
+
+#events {
+  display: grid;
+  grid-template-columns: 2fr 1.25fr;
+  grid-template-rows: auto;
+}
+
+#calendar {
+  height: 100%;
+  width: 96%;
+  margin: 0 2%;
+}
+
+#evt {
+  margin-top: 2.5rem;
+  padding: 0 1rem;
+}
+
+#evt h1 {
+  text-align: center;
+  margin: 2rem 0;
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Connexion Administrateur - 47 Fight club</title>
+
+    <!--********DESCRIPTION********-->
+    <meta name="description" content="Espace de connexion réservé aux administrateurs de 47 Fight club." />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="googlebot" content="noindex, nofollow" />
+    <meta name="author" content="Fabrice Paraillous & Marion Lecuona" />
+    <meta name="copyright" content="47 Fight club © 2025" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/logo.png" />
+   
+    <!--********LINKS, FONTS, CDN********-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="../style/login.css" />
+    <link rel="stylesheet" href="../style/login_responsive.css" />
+    
+    <!--********SECURITY********-->
+    <meta name="referrer" content="no-referrer" />
+  </head>
+<body>
+   
+    <!--********MAIN********-->
+    <main> 
+      <div class="container-main">
+        <h1>Compte administrateur</h1>
+        <form action="" method="post">
+      <div class="container-form_input">
+            <input
+              type="text"
+              placeholder="Votre nom d'utilisateur ici..."
+              autocomplete="off"
+              name="username"
+              required
+              id="username"
+            />
+            <input
+              type="password"
+              placeholder="Votre mot de passe ici..."
+              name="password"
+              autocomplete="off"
+              required
+              id="password"
+            />
+        <button type="submit" class="link-btn_red">
+          Se connecter <i class="fa-solid fa-paper-plane"></i>
+        </button>
+      </div>
+    </main>
+
+    <!--********FOOTER********-->
+    
+    <noscript>
+      <div
+        style="
+          padding: 20px;
+          width: 600px;
+          margin: 0 auto;
+          background: #ff0004dc;
+          color: #000000;
+          border-radius: 4px;
+          text-align: center;
+        "
+      >
+        <strong>JavaScript est désactivé</strong><br />
+        Ce site nécessite JavaScript pour fonctionner correctement. Veuillez
+        l'activer dans votre navigateur.
+      </div>
+    </noscript>
+  </body>
+  <script src="../js/headerFooterLoader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="../js/login.js"></script>
+</html>
+
+
+

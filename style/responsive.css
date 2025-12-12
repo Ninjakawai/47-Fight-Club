@@ -1,0 +1,97 @@
+@media screen and (max-width: 1079px) {
+  footer nav {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .container-main {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  header nav ul {
+    display: none;
+  }
+
+  .container-info p {
+    border-radius: 10px;
+    background: #ff00003d;
+    padding: 15px;
+  }
+
+  .contact,
+  .social-proff {
+    flex-direction: column;
+  }
+
+  .social-proff .proff {
+    width: 90%;
+  }
+
+  .event-img {
+    width: 100%;
+    max-width: 380px;
+  }
+
+  .header-burger_icon {
+    display: flex;
+    font-size: 30px;
+    color: #ff0004;
+  }
+
+  main {
+    padding: 0;
+  }
+
+  main img {
+    display: none;
+  }
+
+  .container-calendar {
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .event-info {
+    max-width: 380px;
+  }
+
+  .container-main,
+  .container-event .event-img {
+    width: 100%;
+  }
+
+  container-event_profile img {
+    width: auto;
+  }
+
+  .stats {
+    gap: 25px;
+  }
+
+  .container-footer,
+  footer nav {
+    gap: 20px;
+  }
+
+  footer nav ul {
+    flex-wrap: wrap;
+  }
+
+  .stats,
+  .container-info,
+  .container-team,
+  .social-proff,
+  .container-footer,
+  footer nav,
+  .contact-info_row,
+  .contact,
+  .calendar {
+    flex-direction: column;
+  }
+}

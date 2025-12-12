@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>47 Fight Club - Calendrier Évènementiel</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/logo.png" />
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.19/index.global.min.js"></script>
+    <script src="./js/calendar.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./style/headerFooter.css" />
+    <link rel="stylesheet" href="./style/calendar.css" />
+  </head>
+  <body>
+    <main>
+      <div id="events">
+        <div id="calendar"></div>
+        <div id="evt">
+          <img src="./img/background.png" alt="background" id="evtImg" />
+          <h1 class="redFont">Évènement</h1>
+          <h2 class="redFont">Titre:</h2>
+          <h2 id="evtTitle">N/A</h2>
+          <br />
+          <h2 class="redFont">Date:</h2>
+          <h2 id="evtDate">N/A</h2>
+          <h2 id="evtHour">N/A</h2>
+          <br />
+          <h2 class="redFont">Description:</h2>
+          <details>
+            <summary id="evtSummary">N/A</summary>
+            <h3 id="evtDescription">N/A</h3>
+          </details>
+          <br />
+          <h2 class="redFont">Organisateur:</h2>
+          <h2 id="evtMaker">N/A</h2>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="./js/headerFooterLoader.js"></script>
+  <script src="./js/pop-in.js"></script>
+</html>

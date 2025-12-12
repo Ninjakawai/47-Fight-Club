@@ -1,0 +1,476 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: black;
+}
+
+#titre {
+  display: flex;
+  justify-content: center;
+  font-size: 3rem;
+  color: red;
+}
+
+#animation {
+  min-height: 100vh;
+}
+
+#pagePrincipal {
+  background-color: black;
+  min-height: 100vh;
+  font-size: 1.5rem;
+}
+
+#club {
+  display: flex;
+  margin: 20vh;
+  flex-flow: row;
+  font-size: 1.5rem;
+  gap: 30px;
+}
+
+#paratext {
+  color: rgb(255, 255, 255);
+}
+
+#logo {
+  filter: invert(100%);
+}
+
+#divLogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: black;
+}
+
+.photo {
+  background-image: url("../img/main-background-bw.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position-x: center;
+  background-size: cover;
+}
+
+#photoCoach1 {
+  display: flex;
+  margin: 20vh;
+  flex-flow: row;
+  font-size: 1.5rem;
+  gap: 30px;
+  width: 70%;
+}
+
+#photoCoach2 {
+  display: flex;
+  flex-flow: row-reverse;
+  margin: 20vh;
+  font-size: 1.5rem;
+  width: 70%;
+  gap: 30px;
+}
+
+.photo p {
+  color: rgb(255, 255, 255);
+}
+
+.divTextCoach {
+  border-radius: 20px;
+  background-color: #ff000062;
+  padding: 10vh;
+  line-height: normal;
+  width: 70%;
+}
+
+.photoCadre {
+  border: solid;
+  border-color: rgba(255, 255, 255, 0);
+  width: 30%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#Fab {
+  background-image: url("../img/fabrice-pp.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#Mar {
+  background-image: url("../img/marion-pp.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#Clu {
+  background-image: url("../img/LogoFightClubNoirBlanc.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  filter: invert(100%);
+}
+
+/********GLOBAL********/
+
+@import url("https://fonts.googleapis.com/css2?family=Manufacturing+Consent&family=Montserrat:ital,wght@0,10…");
+
+* {
+  font-family: "Montserrat", sans-serif;
+
+  box-sizing: border-box;
+
+  margin: 0;
+
+  padding: 0;
+
+  user-select: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: black;
+
+  font-family: sans-serif;
+
+  min-height: 100vh;
+}
+
+section {
+  padding: 50px 0px;
+}
+
+body,
+header a,
+.link-btn_red,
+.container-main,
+.container-team button,
+.proff:hover small,
+footer nav ul li a {
+  color: #fff;
+}
+
+footer {
+  margin: 0 auto;
+  width: 90%;
+}
+
+/********HEADER********/
+
+header {
+  z-index: 2;
+
+  background-color: black;
+
+  top: 0;
+
+  margin-top: 0;
+
+  position: sticky;
+
+  height: 78px;
+}
+
+nav,
+.container-logo {
+  height: 100%;
+}
+
+.container-logo img {
+  height: 90%;
+}
+
+header a {
+  text-decoration: none;
+
+  list-style: none;
+
+  font-size: 18px;
+}
+
+nav ul li a {
+  display: inline-block;
+
+  border-bottom: 5px solid transparent;
+}
+
+.container-footer_links i,
+.card i {
+  cursor: pointer;
+}
+
+nav ul li a:hover {
+  transform: translateY(-5px);
+
+  border-bottom-color: red;
+}
+
+header,
+.container-logo,
+ul,
+.social-proff,
+.proff,
+.card_links {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+nav {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  width: 90%;
+}
+
+.container-logo {
+  gap: 25px;
+}
+
+nav ul {
+  gap: 40px;
+}
+
+.nav-title_links,
+footer .container-logo a {
+  color: #ff0004;
+
+  font-weight: bolder;
+
+  font-size: 35px;
+}
+
+.link-btn_red {
+  background-color: #ff0004;
+
+  border: none;
+
+  border-radius: 10px;
+
+  padding: 10px 15px;
+
+  cursor: pointer;
+}
+
+footer nav {
+  width: 100%;
+}
+
+footer {
+  flex-direction: column;
+
+  display: flex;
+
+  gap: 15px;
+
+  padding-bottom: 50px;
+}
+
+footer .line {
+  height: 2px;
+
+  width: 100%;
+
+  background-color: #ff0004;
+}
+
+.container-footer {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+.container-footer_links {
+  font-size: 20px;
+
+  gap: 10px;
+
+  display: flex;
+
+  align-items: center;
+
+  color: #ff0004;
+}
+
+.arrow-up {
+  padding: 5px;
+
+  background-color: red;
+
+  color: black;
+
+  border-radius: 100%;
+
+  font-size: 12px;
+}
+
+.arrow-up i {
+  animation: arrow_up 500ms infinite alternate-reverse linear;
+}
+
+@keyframes arrow_up {
+  from {
+    transform: translateY(1px);
+  }
+
+  to {
+    transform: translateY(-1px);
+  }
+}
+
+/* Responsive */
+
+@media screen and (max-width: 1079px) {
+  footer nav {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .container-main {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  #animation,
+  #divLogo {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  header nav ul {
+    display: none;
+  }
+
+  #titre {
+    text-align: center;
+  }
+
+  #photoCoach1,
+  #photoCoach2,
+  #club {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin: 0;
+    width: 99%;
+    padding-top: 20vh;
+  }
+
+  .divTextCoach {
+    width: 90%;
+  }
+
+  .photoCadre {
+    min-width: 30vh;
+    min-height: 30vh;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .container-info p {
+    border-radius: 10px;
+    background: #ff00003d;
+    padding: 15px;
+  }
+
+  .contact,
+  .social-proff {
+    flex-direction: column;
+  }
+
+  .social-proff .proff {
+    width: 90%;
+  }
+
+  .event-img {
+    width: 100%;
+    max-width: 380px;
+  }
+
+  .header-burger_icon {
+    display: flex;
+    font-size: 30px;
+    color: #ff0004;
+  }
+
+  main {
+    padding: 0;
+  }
+
+  main img {
+    display: none;
+  }
+
+  .container-calendar {
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .event-info {
+    max-width: 380px;
+  }
+
+  .container-main,
+  .container-event .event-img {
+    width: 100%;
+  }
+
+  container-event_profile img {
+    width: auto;
+  }
+
+  .stats {
+    gap: 25px;
+  }
+
+  .container-footer,
+  footer nav {
+    gap: 20px;
+  }
+
+  footer nav ul {
+    flex-wrap: wrap;
+  }
+
+  .stats,
+  .container-info,
+  .container-team,
+  .social-proff,
+  .container-footer,
+  footer nav,
+  .contact-info_row,
+  .contact,
+  .calendar {
+    flex-direction: column;
+  }
+}
