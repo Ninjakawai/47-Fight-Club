@@ -67,7 +67,7 @@ app.get("/contact", (req, res) => {
   res.sendFile(path.join(__dirname + "/contact.html"));
 });
 
-app.get("/evenements", (req, res) => {
+app.get("/calendrier", (req, res) => {
   res.sendFile(path.join(__dirname + "/calendrier.html"));
 });
 
@@ -105,7 +105,16 @@ app.post("/admin-login", async (req, res) => {
   }
 });
 
-app.post("/events-write", (req, res) => {
+app.get("/event", (req, res) => {
+  return res.json(JSON.parse(fs.readFileSync("events.json", "utf-8")));
+});
+
+const requireAdmin = (req, res, next) => {
+  if (req.session.isAdmin) return next();
+  res.redirect("/admin/login");
+};
+
+app.post("/events-write", requireAdmin, (req, res) => {
   const e = req.body;
 
   let data = [];
@@ -131,12 +140,18 @@ app.post("/events-write", (req, res) => {
   });
 });
 
-const requireAdmin = (req, res, next) => {
-  if (req.session.isAdmin) return next();
-  res.redirect("/admin/login");
-};
+app.delete("/events-delete/:id", requireAdmin, (req, res) => {
+  const id = parseInt(req.params.id);
 
-app.get("/admin", (req, res) => {
+  const fileContent = fs.readFileSync("events.json", "utf-8").trim();
+  const array = JSON.parse(fileContent);
+
+  const data = array.filter((e, index) => index !== id);
+  fs.writeFileSync("events.json", JSON.stringify(data, null, 2));
+  res.send("Événement supprimé");
+});
+
+app.get("/admin", requireAdmin, (req, res) => {
   res.sendFile(path.join(__dirname + "/admin/home.html"));
 });
 

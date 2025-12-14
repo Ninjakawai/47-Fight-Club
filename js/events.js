@@ -4,11 +4,11 @@ const eventDisplay = async () => {
   const data = await response.json();
 
   const table = document.querySelector("table tbody");
-  const section = document.querySelector(".section");
+  const section = document.querySelector("section");
 
   if (data.length === 0) {
     let content = "<p>Aucun événement</p>";
-    section.appendChild(section);
+    section.insertAdjacentHTML("beforeend", "<p>Aucun événement</p>");
   } else {
     for (let i = 0; i < data.length; i++) {
       let content = `
@@ -24,6 +24,8 @@ const eventDisplay = async () => {
 
       table.insertAdjacentHTML("beforeend", content);
     }
+
+    deleteFunction();
   }
 };
 
@@ -33,28 +35,27 @@ const deleteFunction = async () => {
   const btnDelete = document.querySelectorAll(".btn-delete");
   btnDelete.forEach((b) => {
     b.addEventListener("click", async () => {
-      const response = await fetch(
-        `/events-delete?id=${parseInt(b.getAttribute("data-id"))}`,
-      );
-      const data = await response.json();
-
+      const id = b.getAttribute("data-id");
+      const response = await fetch(`/events-delete/${id}`, {
+        method: "DELETE",
+      });
+      const text = await response.text();
       if (response.ok) {
         Swal.fire({
-          title: "Succès !",
-          text: "Votre événement a été supprimé avec succès.",
+          title: "Événement supprimé !",
+          text: text,
           icon: "success",
         }).then(() => {
           eventDisplay();
+          window.location.reload();
         });
       } else {
         Swal.fire({
           title: "Erreur !",
-          text: "Erreur : " + data.message,
+          text: "Erreur : " + text,
           icon: "error",
         });
       }
     });
   });
 };
-
-deleteFunction();
