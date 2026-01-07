@@ -1,14 +1,4 @@
-let header = `      <div id="main"></div>
-    <!--********HEADER********-->
-    <div class="header-mobile" id="open">
-      <nav><a style="color: #ff0004;"  href="#close"><i class="fa-solid fa-x"></i></a></nav>
-      <ul>
-          <li><a href="/">Accueil</a></li>
-          <li><a href="/histoire">Histoire</a></li>
-          <li><a href="/contact">Contact</a></li>
-          <li><a href="/rejoindre" class="link-btn_red">Nous rejoindre</a></li>
-        </ul>
-    </div>
+let header = `<!--********HEADER********-->
     <header>
       <nav>
         <div class="container-logo">
@@ -36,9 +26,9 @@ let footer = `
         </div>
         <ul>
           <li><a href="/histoire">Histoire</a></li>
-          <li><a href="/rejoindre">Nous rejoindre</a></li>
+          <li><a href="/nous-rejoindre">Nous rejoindre</a></li>
           <li><a href="/hall-of-fame">Hall of fame</a></li>
-          <li><a href="/evenements">Evènements</a></li>
+          <li><a href="/calendrier">Evènements</a></li>
           <li><a href="/contact">Contact</a></li>
           <li><a href="/don">Don</a></li>
         </ul>

@@ -3,8 +3,8 @@ let allEvents = [
         "title": "Réunion",
         "start": "2025-11-20",
         "extendedProps": {
-            "summary": "Réunion commenditaire",
-            "description": "Le groupe à une réunion commenditaire avec le 47 Fight Club",
+            "summary": "Réunion commanditaire",
+            "description": "Le groupe a une réunion commanditaire avec le 47 Fight Club",
             "owner": "Nathan VIDAL"
         }
     },

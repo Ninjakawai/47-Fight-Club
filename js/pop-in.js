@@ -1,11 +1,8 @@
-
-
 const divoverlay = document.createElement('div');         //creer une div
 const divcontent = document.createElement('div');
 const divh2 = document.createElement('h2');
 const button = document.createElement('button');
 const style = document.createElement('style');
-
 
 document.head.appendChild(style);                         // créer une balise style dans le HEAD
 document.body.appendChild(divoverlay);                    //insere la div dans le body
@@ -13,20 +10,17 @@ divoverlay.appendChild(divcontent);                       //insere la div dans l
 divcontent.appendChild(divh2);
 divcontent.appendChild(button);
 
-
-
 divoverlay.classList.add("overlaypopup");                 // ajoute une class a un element
 divcontent.classList.add("contentpopup");
 divh2.setAttribute("id","h2popup");                       // ajouter un id a un element
 
-
 style.innerHTML =" @media screen and (max-width: 900px) {.contentpopup " +
 "{width:100% !important; max-width: fit-content !important;} #h2popup {font-size:3rem !important;}" + 
 ".overlaypopup{align-items: start !important;}}";
-divh2.innerHTML = "Arrète de scroller, vient t'entrainer";
+divh2.innerHTML = "Arrête de scroller, viens t'entrainer";
 button.textContent ="X";
 
-//tout en un seul bloc 
+//insertion de css
 Object.assign(divoverlay.style, {
     position: "fixed",
     top : "0",
@@ -47,7 +41,7 @@ Object.assign(divcontent.style,{
     maxWidth: "45%",
     minHeight: "200px",
     padding: "40px",
-    backgroundImage: "url(./istockphoto-1177188061-612x612.jpg)",
+    backgroundImage: "url(../img/istockphoto-1177188061-612x612.jpg)",
     borderRadius: "20px",
     position : "relative",
     backgroundSize: "cover",
@@ -56,7 +50,6 @@ Object.assign(divcontent.style,{
     justifyContent:"center"
     
 });
-
 
 Object.assign(divh2.style,{
     display: "flex",
@@ -90,13 +83,10 @@ Object.assign(button.style,{
 })
 
 
-
-
-
+//fonction d'ouverture et fermeture du popin
 function openPopup(){
     divoverlay.style.display = "flex"
 }
-
 
 function closePopup(){
     divoverlay.style.display = 'none';
@@ -104,15 +94,4 @@ function closePopup(){
 
 button.addEventListener("click", closePopup);
 
-setTimeout(openPopup, 600000);
-
-
-
-
-
-
-
-
-
-
-
+setTimeout(openPopup, 600000); //10 minutes

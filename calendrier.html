@@ -13,15 +13,17 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./style/headerFooter.css" />
+    <link rel="stylesheet" href="./style/index.css" />
     <link rel="stylesheet" href="./style/calendar.css" />
   </head>
   <body>
     <main>
       <div id="events">
+        <!-- Div comportant le calendrier -->
         <div id="calendar"></div>
+        <!-- div comportant la partie qui décrit les évènements -->
         <div id="evt">
-          <img src="./img/background.png" alt="background" id="evtImg" />
+          <img src="./img/background.png" alt="background" id="evtImg"/>
           <h1 class="redFont">Évènement</h1>
           <h2 class="redFont">Titre:</h2>
           <h2 id="evtTitle">N/A</h2>
@@ -42,6 +44,7 @@
       </div>
     </main>
   </body>
+  <!-- Importe le header, le footer et le pop-in -->
   <script src="./js/headerFooterLoader.js"></script>
   <script src="./js/pop-in.js"></script>
 </html>
