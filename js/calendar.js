@@ -82,3 +82,10 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     calendar.render();
 });
+
+function randint(a, b) {
+    return Math.round((Math.random()*(b-a))+a);
+};
+
+imageElement = document.getElementById("evtImg")
+imageElement.style.backgroundImage = "url(./img/evtGal/ImgEvt" + randint(1, 23) + ".jpg)";
