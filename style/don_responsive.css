@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'street-fighter';
+    src: url('./police_streetFighter.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 @media screen and (max-width: 1079px) {
   footer nav {
     flex-direction: column;
@@ -54,3 +60,4 @@
     flex-direction: column;
   }
 }
+

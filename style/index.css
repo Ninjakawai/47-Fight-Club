@@ -1,5 +1,13 @@
 /********GLOBAL********/
 @import url("https://fonts.googleapis.com/css2?family=Manufacturing+Consent&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+@font-face {
+  font-family: "street-fighter";
+  src: url("./police_streetFighter.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   font-family: "Montserrat", sans-serif;
   box-sizing: border-box;
@@ -240,12 +248,12 @@ main,
 main h1,
 .nav-title_links,
 footer .container-logo a {
-  font-family: "Manufacturing Consent", system-ui;
+  font-family: "street-fighter", system-ui;
 }
 
 main h1 {
   color: #ff0004;
-  font-size: 60px;
+  font-size: 45px;
 }
 
 .btn-border_red {
@@ -367,7 +375,9 @@ footer {
   opacity: 0;
   pointer-events: none;
   z-index: 5;
-  transition: opacity 200ms, transform 200ms;
+  transition:
+    opacity 200ms,
+    transform 200ms;
 }
 
 .img-wrapper:hover img {

@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "street-fighter";
+  src: url("./police_streetFighter.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 /********GLOBAL & RESET********/
 @import url("https://fonts.googleapis.com/css2?family=Manufacturing+Consent&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
@@ -155,7 +161,8 @@ footer .container-logo a {
   color: #ff0004;
   font-weight: bolder;
   font-size: 35px;
-  font-family: "Manufacturing Consent", system-ui; /* Regroupé depuis main h1, .nav-title_links, etc. */
+  font-family:
+    "street-fighter", system-ui; /* Regroupé depuis main h1, .nav-title_links, etc. */
 }
 
 .link-btn_red {
@@ -258,20 +265,20 @@ main img {
 
 /* section, footer { width: 100%; } -> section dans section{}, footer dans footer{} */
 
-
 /********VOS SÉLECTEURS SPÉCIFIQUES (Déplacés pour éviter les conflits de spécificité)********/
-h1{
+h1 {
   color: red; /* La propriété color a été déplacée, mais est redéfinie dans main h1 */
 }
 
-.divSec{
+.divSec {
   height: 100vh;
   width: 100%;
   position: relative;
   display: block;
 }
 
-.boxL, .boxR{
+.boxL,
+.boxR {
   width: 40%;
   height: auto;
   position: fixed;
@@ -286,19 +293,19 @@ h1{
   align-items: center;
   text-align: center;
 }
-.img{
+.img {
   width: 70%;
   height: auto;
 }
 
-#haut{
+#haut {
   display: flex;
   align-items: center;
   flex-direction: column;
   gap: 20px;
 }
 
-#bas{
+#bas {
   display: flex;
   height: 100vh;
   width: 100%;
@@ -308,7 +315,7 @@ h1{
   gap: 40px;
 }
 
-#NSrej{
+#NSrej {
   font-size: 1em;
   width: 20%;
   height: 15%;
@@ -320,26 +327,26 @@ h1{
   cursor: pointer;
 }
 
-#DLN{
+#DLN {
   font-size: 7em;
 }
 
-#pdecouvrerunepresentation{
+#pdecouvrerunepresentation {
   color: white;
   font-size: 3em;
 }
 
-#HallOfFameTitle{
+#HallOfFameTitle {
   font-size: 10em;
 }
 
 /********MEDIA QUERIES********/
 
-@media screen and (max-width: 1400px){
-  #HallOfFameTitle{
+@media screen and (max-width: 1400px) {
+  #HallOfFameTitle {
     font-size: 8em;
   }
-  #pdecouvrerunepresentation{
+  #pdecouvrerunepresentation {
     font-size: 2em;
   }
 }
@@ -357,15 +364,15 @@ h1{
   }
 }
 
-@media screen and (max-width: 1000px){
-  #HallOfFameTitle{
+@media screen and (max-width: 1000px) {
+  #HallOfFameTitle {
     font-size: 5em;
   }
-  #pdecouvrerunepresentation{
+  #pdecouvrerunepresentation {
     font-size: 1.5em;
   }
 
-  .divSec{
+  .divSec {
     display: flex;
     flex-direction: column;
     height: auto;
@@ -376,7 +383,8 @@ h1{
     width: 100%;
   }
 
-  .boxL, .boxR{
+  .boxL,
+  .boxR {
     width: 90%;
     height: auto;
     z-index: 10;
@@ -394,7 +402,7 @@ h1{
     padding: 15px;
   }
 
-  .img{
+  .img {
     width: 50%; /* L'image prend 50% de l'espace */
     height: auto;
     display: block;
@@ -421,10 +429,10 @@ h1{
     cursor: pointer;
   }
 
-  #DLN{
+  #DLN {
     font-size: 4em;
   }
-  #bas{
+  #bas {
     height: auto;
     gap: 20px;
     padding: 40px 20px;
@@ -514,12 +522,13 @@ h1{
 }
 
 /* Pour les très petits écrans, passer en mode vertical */
-@media screen and (max-width: 600px){
-  .boxL, .boxR{
+@media screen and (max-width: 600px) {
+  .boxL,
+  .boxR {
     flex-direction: column; /* Image en haut, texte en bas */
   }
 
-  .img{
+  .img {
     width: 80%;
   }
 
@@ -533,31 +542,31 @@ h1{
   }
 }
 
-@media screen and (max-width: 750px){
-  #DLN{
+@media screen and (max-width: 750px) {
+  #DLN {
     font-size: 3em;
   }
-  #NSrej{
+  #NSrej {
     width: 40%;
   }
 }
 
-@media screen and (max-width: 550px){
-  #DLN{
+@media screen and (max-width: 550px) {
+  #DLN {
     font-size: 2.3em;
   }
 }
 
-@media screen and (max-width: 400px){
-  #HallOfFameTitle{
+@media screen and (max-width: 400px) {
+  #HallOfFameTitle {
     font-size: 2.5em;
   }
-  #pdecouvrerunepresentation{
+  #pdecouvrerunepresentation {
     font-size: 1em;
     width: 80%;
     text-align: center;
   }
-  #DLN{
+  #DLN {
     font-size: 1.5em;
   }
 }

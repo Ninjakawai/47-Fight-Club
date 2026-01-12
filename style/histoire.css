@@ -1,6 +1,18 @@
+@font-face {
+  font-family: "street-fighter";
+  src: url("./police_streetFighter.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 * {
   margin: 0;
   padding: 0;
+}
+
+main h1,
+.nav-title_links,
+footer .container-logo a {
+  font-family: "street-fighter", system-ui;
 }
 
 body {

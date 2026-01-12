@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'street-fighter';
+    src: url('./police_streetFighter.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 details,
 section {
   display: flex;
@@ -33,3 +39,4 @@ table tr th {
   color: #fff;
   border: 1px solid black;
 }
+
