@@ -1,6 +1,6 @@
 const express = require("express");
 const session = require("express-session");
-onst path = require("path");
+const path = require("path");
 const fs = require("fs");
 
 const app = express();
