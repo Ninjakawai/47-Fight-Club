@@ -41,8 +41,6 @@ let footer = `
             <i class="fa-solid fa-arrow-up"></i>
           </a>
             <i class="fa-brands fa-youtube"></i>
-            <i class="fa-brands fa-linkedin-in"></i>
-            <i class="fa-brands fa-x-twitter"></i>
             <i class="fa-brands fa-instagram"></i>
             <i class="fa-brands fa-facebook-f"></i>
       </div>
