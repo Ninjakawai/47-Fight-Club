@@ -50,6 +50,7 @@ body {
 
 #logo {
   filter: invert(100%);
+  pointer-events: none;
 }
 
 #divLogo {
@@ -58,6 +59,7 @@ body {
   align-items: center;
   height: 100vh;
   background-color: black;
+  pointer-events: none;
 }
 
 .photo {
