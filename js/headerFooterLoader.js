@@ -1,4 +1,14 @@
-let header = `<!--********HEADER********-->
+let header = `      <div id="main"></div>
+    <!--********HEADER********-->
+    <div class="header-mobile" id="open">
+      <nav><a style="color: #ff0004;"  href="#close"><i class="fa-solid fa-x"></i></a></nav>
+      <ul>
+          <li><a href="/">Accueil</a></li>
+          <li><a href="/histoire">Histoire</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/rejoindre" class="link-btn_red">Nous rejoindre</a></li>
+        </ul>
+    </div>
     <header>
       <nav>
         <div class="container-logo">

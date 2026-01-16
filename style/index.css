@@ -515,23 +515,10 @@ footer nav {
   width: 100%;
 }
 
-footer {
-  flex-direction: column;
-  display: flex;
-  gap: 15px;
-  padding-bottom: 50px;
-}
-
 footer .line {
   height: 2px;
   width: 100%;
   background-color: #ff0004;
-}
-
-.container-footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
 
 .container-footer_links {

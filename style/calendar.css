@@ -1,5 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Manufacturing+Consent&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
+@media only screen and (orientation: portrait) and (max-width: 479px){
+  .header-mobile {
+    content-visibility: visible !important;
+    display: flex !important;
+  }
+}
+
+/* RESET */
 * {
   font-family: "Montserrat", sans-serif;
   box-sizing: border-box;
@@ -14,36 +22,10 @@ html {
 
 body {
   background-color: black;
+  color: #fff;
 }
 
-footer {
-  flex-direction: column;
-  display: flex;
-  gap: 15px;
-  padding: 0 2em 50px;
-  height: 152px;
-  margin-top: 1em;
-}
-
-header {
-  z-index: 2;
-  margin-top: 0;
-  position: sticky;
-  top: 0;
-  height: 78px;
-  border-bottom: 1px solid red;
-  padding-bottom: 0px;
-  backdrop-filter: blur(10px);
-}
-
-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 0 2em;
-  width: 100%;
-}
-
+/* GLOBAL */
 ul {
   list-style: none;
 }
@@ -56,93 +38,28 @@ p {
   margin-bottom: 8px;
 }
 
-header a {
-  text-decoration: none;
-  list-style: none;
-  font-size: 18px;
-}
-
-.header-mobile {
-  display: none;
-  padding: 50px;
-  z-index: 5;
-  position: fixed;
-  width: 100%;
+/* NAV */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   height: 100%;
-  background: black;
-  gap: 100px;
-  justify-content: start;
+  width: 90%;
+  margin: 0 2em;
 }
 
-.header-mobile:target {
+nav ul {
   display: flex;
-}
-
-.header-mobile ul {
-  gap: 50px;
-  font-size: 30px;
-}
-
-.header-mobile nav {
-  height: auto;
-  justify-content: right;
-  font-size: 35px;
-}
-
-.header-mobile {
-  flex-direction: column;
   align-items: center;
-}
-
-.header-mobile ul {
-  flex-direction: column;
-  align-items: center;
-  display: flex;
-}
-
-.header-mobile ul {
   justify-content: center;
-}
-
-.header-mobile ul a {
-  color: #fff;
+  gap: 40px;
 }
 
 nav ul li a {
   display: inline-block;
   border-bottom: 5px solid transparent;
   transition: 200ms;
-}
-
-nav ul {
-  gap: 40px;
-}
-
-footer nav {
-  width: 90%;
-}
-
-body,
-header a,
-.link-btn_red,
-footer nav ul li a {
   color: #fff;
-}
-
-nav,
-.container-logo {
-  height: 100%;
-}
-
-.container-logo img {
-  height: 90%;
-  min-height: 5em;
-  padding-bottom: 1em;
-  aspect-ratio: calc(375 / 533);
-}
-
-.container-footer_links i {
-  cursor: pointer;
 }
 
 nav ul li a:hover {
@@ -150,18 +67,7 @@ nav ul li a:hover {
   border-bottom-color: red;
 }
 
-header,
-.container-logo,
-ul {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.container-logo {
-  gap: 25px;
-}
-
+/* TITRES / BOUTONS */
 .nav-title_links,
 footer .container-logo a {
   color: #ff0004;
@@ -171,30 +77,14 @@ footer .container-logo a {
 
 .link-btn_red {
   background-color: #ff0004;
+  color: #fff;
   border: none;
   border-radius: 10px;
   padding: 10px 15px;
   cursor: pointer;
 }
 
-footer .line {
-  border: 1px solid red;
-}
-
-.container-footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.container-footer_links {
-  font-size: 20px;
-  gap: 10px;
-  display: flex;
-  align-items: center;
-  color: #ff0004;
-}
-
+/* ICONES */
 .arrow-up {
   padding: 5px;
   background-color: red;
@@ -208,13 +98,11 @@ footer .line {
 }
 
 @keyframes arrow_up {
-  from {
-    transform: translateY(1px);
-  }
-  to {
-    transform: translateY(-1px);
-  }
+  from { transform: translateY(1px); }
+  to { transform: translateY(-1px); }
 }
+
+/* TEXTES */
 summary {
   font-size: 1.5em;
   font-weight: bold;
@@ -224,8 +112,9 @@ summary {
   color: red;
 }
 
+/* EVENTS / CALENDAR */
 .event-mouseover-animation {
-  border: 4px red solid;
+  border: 4px solid red;
 }
 
 .fc {
@@ -239,9 +128,14 @@ summary {
 }
 
 .fc-toolbar-title {
-  margin-left: 8px;
-  margin-right: 8px;
+  margin: 0 8px;
   color: white;
+  text-transform: capitalize;
+}
+
+.fc .fc-col-header-cell-cushion,
+.fc-multimonth-title {
+  text-transform: capitalize;
 }
 
 .fc .fc-list-sticky .fc-list-day > * {
@@ -254,12 +148,6 @@ summary {
   border: 1px solid black;
 }
 
-.fc-toolbar-title,
-.fc .fc-col-header-cell-cushion,
-.fc-multimonth-title {
-  text-transform: capitalize;
-}
-
 .fc div.fc-multimonth-month div.fc-multimonth-header,
 .fc-multimonth-month .fc-multimonth-daygrid {
   background-color: black;
@@ -269,30 +157,28 @@ summary {
   padding: 0 0.6em 1.2em;
 }
 
+/* EVENTS LAYOUT */
 #evtImg {
   width: 100%;
   height: 40vh;
+  background: center / cover no-repeat;
   border: none;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
 }
 
 #events {
-  display: grid;
-  grid-template-columns: 2fr 1.25fr;
-  grid-template-rows: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 #calendar {
-  height: 100%;
-  width: 96%;
-  margin: 0 2%;
+  width: 70rem;
+  height: 120%;
 }
 
 #evt {
-  margin-top: 2.5rem;
-  padding: 0 1rem;
+  width: 35rem;
+  padding: 1rem 0;
 }
 
 #evt h1 {

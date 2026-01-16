@@ -5,6 +5,7 @@
 
 body {
   background-color: black;
+  pointer-events: none;
 }
 
 #titre {
@@ -135,6 +136,7 @@ body {
 
 html {
   scroll-behavior: smooth;
+  z-index: -1;
 }
 
 ul {
@@ -174,20 +176,6 @@ footer {
 
 /********HEADER********/
 
-header {
-  z-index: 2;
-
-  background-color: black;
-
-  top: 0;
-
-  margin-top: 0;
-
-  position: sticky;
-
-  height: 78px;
-}
-
 nav,
 .container-logo {
   height: 100%;
@@ -195,14 +183,6 @@ nav,
 
 .container-logo img {
   height: 90%;
-}
-
-header a {
-  text-decoration: none;
-
-  list-style: none;
-
-  font-size: 18px;
 }
 
 nav ul li a {
@@ -272,20 +252,6 @@ footer .container-logo a {
   padding: 10px 15px;
 
   cursor: pointer;
-}
-
-footer nav {
-  width: 100%;
-}
-
-footer {
-  flex-direction: column;
-
-  display: flex;
-
-  gap: 15px;
-
-  padding-bottom: 50px;
 }
 
 footer .line {
