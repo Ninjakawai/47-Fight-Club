@@ -3,26 +3,26 @@ let header = `      <div id="main"></div>
     <div class="header-mobile" id="open">
       <nav><a style="color: #ff0004;"  href="#close"><i class="fa-solid fa-x"></i></a></nav>
       <ul>
-          <li><a href="/47-Fight-Club/">Accueil</a></li>
-          <li><a href="/47-Fight-Club/histoire">Histoire</a></li>
-          <li><a href="/47-Fight-Club/contact">Contact</a></li>
-          <li><a href="/47-Fight-Club/rejoindre" class="link-btn_red">Nous rejoindre</a></li>
+          <li><a href="/">Accueil</a></li>
+          <li><a href="/histoire">Histoire</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/rejoindre" class="link-btn_red">Nous rejoindre</a></li>
         </ul>
     </div>
     <header>
       <nav>
         <div class="container-logo">
           <img src="./img/logo.png" alt="Logo 47 Fight club." />
-          <a href="/47-Fight-Club/" class="nav-title_links">47 Fight club</a>
+          <a href="/" class="nav-title_links">47 Fight club</a>
         </div>
         <a href="#open">
           <i class="fa-solid fa-bars header-burger_icon"></i>
         </a>
         <ul>
-          <li><a href="/47-Fight-Club/">Accueil</a></li>
-          <li><a href="/47-Fight-Club/histoire">Histoire</a></li>
-          <li><a href="/47-Fight-Club/contact">Contact</a></li>
-          <li><a href="/47-Fight-Club/nous-rejoindre" class="link-btn_red">Nous rejoindre</a></li>
+          <li><a href="/">Accueil</a></li>
+          <li><a href="/histoire">Histoire</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/nous-rejoindre" class="link-btn_red">Nous rejoindre</a></li>
         </ul>
       </nav>
     </header>`;
@@ -32,15 +32,15 @@ let footer = `
       <nav>
         <div class="container-logo">
           <img src="./img/logo.png" alt="Logo 47 Fight club." />
-          <a href="/47-Fight-Club/">47 Fight club</a>
+          <a href="/">47 Fight club</a>
         </div>
         <ul>
-          <li><a href="/47-Fight-Club/histoire">Histoire</a></li>
-          <li><a href="/47-Fight-Club/nous-rejoindre">Nous rejoindre</a></li>
-          <li><a href="/47-Fight-Club/hall-of-fame">Hall of fame</a></li>
-          <li><a href="/47-Fight-Club/calendrier">Evènements</a></li>
-          <li><a href="/47-Fight-Club/contact">Contact</a></li>
-          <li><a href="/47-Fight-Club/don">Don</a></li>
+          <li><a href="/histoire">Histoire</a></li>
+          <li><a href="/nous-rejoindre">Nous rejoindre</a></li>
+          <li><a href="/hall-of-fame">Hall of fame</a></li>
+          <li><a href="/calendrier">Evènements</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/don">Don</a></li>
         </ul>
       </nav>
       <div class="line"></div>
