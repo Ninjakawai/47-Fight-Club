@@ -2,434 +2,606 @@
    1. RESET & CONFIGURATION GLOBALE
    ========================================= */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    font-family: 'Arial Black', Arial, sans-serif;
-    /* Fond sombre dégradé rouge/noir */
-    background: linear-gradient(135deg, #0f0000 0%, #240000 100%);
-    min-height: 100vh;
-    /* STRUCTURE FLEX VERTICALE : Essentiel pour que le Header reste en haut */
-    display: flex;
-    flex-direction: column;
-    color: white;
+  font-family: "Arial Black", Arial, sans-serif;
+  /* Fond sombre dégradé rouge/noir */
+  background: linear-gradient(135deg, #0f0000 0%, #240000 100%);
+  min-height: 100vh;
+  /* STRUCTURE FLEX VERTICALE : Essentiel pour que le Header reste en haut */
+  display: flex;
+  flex-direction: column;
+  color: white;
 }
 
 /* Le main prend tout l'espace disponible pour pousser le footer en bas */
 main {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 /* =========================================
-   2. NAVIGATION PRINCIPALE
+   2. HEADER & NAVIGATION PRINCIPALE
    ========================================= */
+header {
+  z-index: 100; /* Au-dessus du contenu, mais sous le menu mobile */
+  background-color: black;
+  position: sticky; /* Reste collé en haut */
+  top: 0;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid #ff1a1a;
+  box-shadow: 0 4px 15px rgba(255, 0, 0, 0.2);
+}
+
 nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 90%;
-    height: 100%;
-    max-width: 1400px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  height: 100%;
+  max-width: 1400px;
 }
 
 /* Logo */
 .container-logo {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  height: 100%;
 }
 
 .container-logo img {
-    height: 50px;
-    width: auto;
+  height: 50px;
+  width: auto;
 }
 
 .nav-title_links {
-    color: #ff1a1a;
-    font-weight: 900;
-    font-size: 24px;
-    text-transform: uppercase;
+  color: #ff1a1a;
+  font-weight: 900;
+  font-size: 24px;
+  text-transform: uppercase;
 }
 
 /* Menu Desktop */
 nav ul {
-    display: flex;
-    gap: 40px;
-    align-items: center;
+  display: flex;
+  gap: 40px;
+  align-items: center;
 }
 
 nav ul li a {
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
-    padding-bottom: 5px;
-    border-bottom: 3px solid transparent;
-    transition: all 0.3s ease;
-    text-transform: uppercase;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding-bottom: 5px;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
 }
 
 nav ul li a:hover {
-    color: #ff1a1a;
-    border-bottom-color: #ff1a1a;
-    transform: translateY(-3px);
-    text-shadow: 0 0 10px rgba(255, 26, 26, 0.5);
+  color: #ff1a1a;
+  border-bottom-color: #ff1a1a;
+  transform: translateY(-3px);
+  text-shadow: 0 0 10px rgba(255, 26, 26, 0.5);
 }
 
 /* Bouton Rouge "Rejoindre" */
 .link-btn_red {
-    background-color: #ff1a1a;
-    color: white !important; /* Force le blanc */
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s;
-    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+  background-color: #ff1a1a;
+  color: white !important; /* Force le blanc */
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
 }
 
 .link-btn_red:hover {
-    transform: scale(1.05);
-    background-color: #ff0000;
-    box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
-    border-bottom: none; /* Pas de soulignement sur le bouton */
-}
-
-footer {
-  border-top: solid red 1px;
+  transform: scale(1.05);
+  background-color: #ff0000;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+  border-bottom: none; /* Pas de soulignement sur le bouton */
 }
 
 /* =========================================
-   3. NAVIGATION INTERNE (CATÉGORIES SPORT)
+   3. MENU MOBILE (BURGER & OVERLAY)
+   ========================================= */
+.header-burger_icon {
+  display: none; /* Caché sur PC */
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Le menu plein écran caché */
+.header-mobile {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.95); /* Noir presque opaque */
+  z-index: 2000; /* TRES HAUT : Au-dessus de tout */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(5px);
+}
+
+/* Quand l'ancre #menu-mobile est active (click burger) */
+.header-mobile:target {
+  display: flex;
+}
+
+/* Croix de fermeture (optionnelle si gérée par lien) */
+.header-mobile .close-btn {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  font-size: 40px;
+  color: #ff1a1a;
+}
+
+.header-mobile ul {
+  flex-direction: column;
+  gap: 40px;
+  text-align: center;
+}
+
+.header-mobile ul li a {
+  font-size: 30px;
+  color: white;
+}
+
+/* =========================================
+   4. NAVIGATION INTERNE (CATÉGORIES SPORT)
    ========================================= */
 .naviguation {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-    padding: 60px 0 40px 0;
-    width: 100%;
-    flex-wrap: wrap;
-    border-bottom: solid red 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding: 60px 0 40px 0;
+  width: 100%;
+  flex-wrap: wrap;
 }
 
 .nav-link {
-    text-decoration: none;
-    font-size: 2.5rem;
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    position: relative;
-    transition: all 0.3s ease;
-    
-    /* Effet contour blanc texte transparent */
-    color: transparent; 
-    -webkit-text-stroke: 2px white;
+  text-decoration: none;
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  transition: all 0.3s ease;
+
+  /* Effet contour blanc texte transparent */
+  color: transparent;
+  -webkit-text-stroke: 2px white;
 }
 
 .nav-link:hover {
-    color: #ff1a1a;
-    -webkit-text-stroke: 0px; /* Enlève le contour */
-    text-shadow: 0 0 25px rgba(255, 26, 26, 0.9);
-    transform: scale(1.1);
+  color: #ff1a1a;
+  -webkit-text-stroke: 0px; /* Enlève le contour */
+  text-shadow: 0 0 25px rgba(255, 26, 26, 0.9);
+  transform: scale(1.1);
 }
 
 /* =========================================
-   4. SECTIONS COMBATTANTS & CARTES
+   5. SECTIONS COMBATTANTS & CARTES
    ========================================= */
 .type-sport-combat {
-    /* Marge pour le scroll à cause du header sticky */
-    scroll-margin-top: 100px; 
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
-    width: 100%;
-    max-width: 1600px; /* Limite la largeur sur les très grands écrans */
-    padding: 20px;
-    margin-bottom: 60px;
+  /* Marge pour le scroll à cause du header sticky */
+  scroll-margin-top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  width: 100%;
+  max-width: 1600px; /* Limite la largeur sur les très grands écrans */
+  padding: 20px;
+  margin-bottom: 60px;
 }
 
 /* Gros Titre de Section (ex: BOXE ANGLAISE) */
 .section-title {
-    width: 100%;
-    text-align: center;
-    font-size: 4rem;
-    color: #ffffff;
-    text-transform: uppercase;
-    margin-bottom: 50px;
-    
-    /* Ombre portée rouge solide style "Comics/Impact" */
-    text-shadow: 5px 5px 0px #ff1a1a; 
-    
-    border-bottom: 3px solid #ff1a1a;
-    padding-bottom: 20px;
-    letter-spacing: 4px;
+  width: 100%;
+  text-align: center;
+  font-size: 4rem;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+
+  /* Ombre portée rouge solide style "Comics/Impact" */
+  text-shadow: 5px 5px 0px #ff1a1a;
+
+  border-bottom: 3px solid #ff1a1a;
+  padding-bottom: 20px;
+  letter-spacing: 4px;
 }
 
 /* Conteneur des cartes alignées */
 .fighter-section {
-    display: flex;
-    gap: 40px;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: center;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 /* --- LA CARTE DU COMBATTANT --- */
 .fighter-card {
-    position: relative;
-    width: 280px;
-    height: 380px;
-    background-color: #000; /* Fond noir par sécurité */
-    border: 4px solid #ff1a1a; /* Bordure ROUGE */
-    border-radius: 15px;
-    overflow: visible; /* Important pour les effets de survol */
-    cursor: pointer;
-    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
-    flex-shrink: 0;
+  position: relative;
+  width: 280px;
+  height: 380px;
+  background-color: #000; /* Fond noir par sécurité */
+  border: 4px solid #ff1a1a; /* Bordure ROUGE */
+  border-radius: 15px;
+  overflow: visible; /* Important pour les effets de survol */
+  cursor: pointer;
+  transition:
+    transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    box-shadow 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+  flex-shrink: 0;
 }
 
 .fighter-card:hover {
-    transform: translateY(-10px) scale(1.02);
-    /* Lueur rouge intense au survol */
-    box-shadow: 0 20px 50px rgba(255, 26, 26, 0.5);
-    border-color: #fff; /* La bordure devient blanche pour l'effet flash */
+  transform: translateY(-10px) scale(1.02);
+  /* Lueur rouge intense au survol */
+  box-shadow: 0 20px 50px rgba(255, 26, 26, 0.5);
+  border-color: #fff; /* La bordure devient blanche pour l'effet flash */
 }
 
 .card-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 11px; /* Légèrement moins que la card pour fitter dedans */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 11px; /* Légèrement moins que la card pour fitter dedans */
 }
 
 .card-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, transparent 0%, transparent 50%, rgba(0,0,0,0.95) 100%);
-    border-radius: 11px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    transparent 50%,
+    rgba(0, 0, 0, 0.95) 100%
+  );
+  border-radius: 11px;
 }
 
 .fighter-name {
-    position: absolute;
-    bottom: 20px;
-    left: 0;
-    right: 0;
-    text-align: center;
-    color: #ff1a1a; /* Nom en ROUGE */
-    font-size: 28px;
-    font-weight: 900;
-    text-transform: uppercase;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
-    letter-spacing: 1px;
-    z-index: 2;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: #ff1a1a; /* Nom en ROUGE */
+  font-size: 28px;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+  letter-spacing: 1px;
+  z-index: 2;
 }
 
 /* --- RÉSEAUX SOCIAUX (Overlay sur la carte) --- */
 .social-panel {
-    position: absolute;
-    left: -20px; /* Décalé vers la gauche pour l'effet "pop-out" */
-    top: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    z-index: 1;
+  position: absolute;
+  left: -20px; /* Décalé vers la gauche pour l'effet "pop-out" */
+  top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 10;
 }
 
 .social-item {
-    display: flex;
-    align-items: center;
-    position: relative;
+  display: flex;
+  align-items: center;
+  position: relative;
 }
 
 .social-icon {
-    width: 45px;
-    height: 45px;
-    background: #ff1a1a; /* Fond ROUGE */
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.6);
-    z-index: 2;
-    border: 2px solid transparent;
+  width: 45px;
+  height: 45px;
+  background: #ff1a1a; /* Fond ROUGE */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.6);
+  z-index: 12;
+  border: 2px solid transparent;
 }
 
 .social-icon:hover {
-    background: #fff;
-    border-color: #ff1a1a;
-    transform: scale(1.1) rotate(360deg);
+  background: #fff;
+  border-color: #ff1a1a;
+  transform: scale(1.1) rotate(360deg);
 }
 
 .social-icon svg {
-    width: 22px;
-    height: 22px;
-    fill: #ffffff; /* Icône BLANCHE */
-    transition: fill 0.3s;
+  width: 22px;
+  height: 22px;
+  fill: #ffffff; /* Icône BLANCHE */
+  transition: fill 0.3s;
 }
 
 .social-icon:hover svg {
-    fill: #ff1a1a; /* Devient rouge sur fond blanc */
+  fill: #ff1a1a; /* Devient rouge sur fond blanc */
 }
 
 .social-username {
-    background: #ff1a1a;
-    color: white;
-    padding: 8px 15px 8px 30px; /* Padding gauche plus grand pour glisser sous l'icône */
-    border-radius: 0 25px 25px 0;
-    font-weight: bold;
-    font-size: 13px;
-    white-space: nowrap;
-    opacity: 0;
-    width: 0;
-    overflow: hidden;
-    transition: all 0.4s ease;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-    margin-left: -25px; /* Chevauchement */
-    position: relative;
-    z-index: 1;
+  background: #ff1a1a;
+  color: white;
+  padding: 8px 15px 8px 30px; /* Padding gauche plus grand pour glisser sous l'icône */
+  border-radius: 0 25px 25px 0;
+  font-weight: bold;
+  font-size: 13px;
+  white-space: nowrap;
+  opacity: 0;
+  width: 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  margin-left: -25px; /* Chevauchement */
+  position: relative;
+  z-index: 11;
 }
 
 .social-item:hover .social-username {
-    opacity: 1;
-    width: 160px;
-    margin-left: -15px;
+  opacity: 1;
+  width: 160px;
+  margin-left: -15px;
 }
 
 /* --- PANNEAU DE STATS (À côté de la carte ou en dessous sur mobile) --- */
 .stats-panel {
-    background: rgba(20, 0, 0, 0.9);
-    border: 2px solid #ff1a1a;
-    border-radius: 10px;
-    padding: 20px;
-    width: 200px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
-    margin-top: 10px;
+  background: rgba(20, 0, 0, 0.9);
+  border: 2px solid #ff1a1a;
+  border-radius: 10px;
+  padding: 20px;
+  width: 200px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+  margin-top: 10px;
 }
 
 .stat-item {
-    color: #fff;
-    margin-bottom: 15px;
-    font-size: 14px;
+  color: #fff;
+  margin-bottom: 15px;
+  font-size: 14px;
 }
 
 .stat-label {
-    color: #ff1a1a;
-    font-weight: bold;
-    display: block;
-    margin-bottom: 5px;
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+  color: #ff1a1a;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .stat-value {
-    font-size: 16px;
-    font-weight: normal;
+  font-size: 16px;
+  font-weight: normal;
 }
 
 /* Bloc Record */
 .record {
-    background: rgba(255, 26, 26, 0.15); /* Fond rouge très léger */
-    padding: 10px;
-    border-radius: 8px;
-    margin-top: 15px;
-    border: 1px solid rgba(255, 26, 26, 0.3);
+  background: rgba(255, 26, 26, 0.15); /* Fond rouge très léger */
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 15px;
+  border: 1px solid rgba(255, 26, 26, 0.3);
 }
 
 .record-detail {
-    display: flex;
-    justify-content: space-between;
-    font-size: 13px;
-    color: #ddd;
-    margin: 5px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    padding-bottom: 2px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #ddd;
+  margin: 5px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 2px;
 }
 
 .record-detail:last-child {
-    border-bottom: none;
+  border-bottom: none;
 }
 
 .record-detail span:first-child {
-    color: #ff1a1a; /* Label en rouge */
-    font-weight: bold;
+  color: #ff1a1a; /* Label en rouge */
+  font-weight: bold;
 }
 
 /* =========================================
-   5. MEDIA QUERIES (RESPONSIVE MOBILE)
+   6. BOUTON RETOUR EN HAUT (BACK TO TOP)
+   ========================================= */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 26, 26, 0.9);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  z-index: 90; /* Sous le header mobile (2000) mais sur le contenu */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+  border: 2px solid white;
+  transition: all 0.3s ease;
+}
+
+.back-to-top i {
+  font-size: 24px;
+  color: white;
+}
+
+.back-to-top:hover {
+  background: white;
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(255, 26, 26, 1);
+}
+
+.back-to-top:hover i {
+  color: #ff1a1a;
+}
+
+/* =========================================
+   7. FOOTER
+   ========================================= */
+footer {
+  background-color: black;
+  color: white;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+  border-top: 3px solid #ff1a1a;
+  margin-top: auto; /* Pousse le footer tout en bas */
+}
+
+footer .line {
+  height: 2px;
+  width: 100%;
+  background-color: #333; /* Ligne grise subtile */
+}
+
+.container-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.container-footer .container-logo a {
+  color: #ff1a1a;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.container-footer_links {
+  font-size: 24px;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.container-footer_links i {
+  color: white;
+  transition: color 0.3s;
+}
+
+.container-footer_links i:hover {
+  color: #ff1a1a;
+}
+
+/* =========================================
+   8. MEDIA QUERIES (RESPONSIVE MOBILE)
    ========================================= */
 @media screen and (max-width: 1024px) {
-    .naviguation {
-        gap: 30px;
-    }
-    .nav-link {
-        font-size: 1.8rem;
-    }
-    .section-title {
-        font-size: 3rem;
-    }
+  .naviguation {
+    gap: 30px;
+  }
+  .nav-link {
+    font-size: 1.8rem;
+  }
+  .section-title {
+    font-size: 3rem;
+  }
 }
 
 @media screen and (max-width: 900px) {
-    /* Cache le menu desktop */
-    nav ul, .link-btn_red {
-        display: none;
-    }
+  /* Cache le menu desktop */
+  nav ul,
+  .link-btn_red {
+    display: none;
+  }
 
-    /* Réalignement header */
-    nav {
-        justify-content: space-between;
-    }
+  /* Affiche le burger */
+  .header-burger_icon {
+    display: block;
+  }
 
-    /* Navigation interne en colonne */
-    .naviguation {
-        flex-direction: column;
-        gap: 20px;
-        padding-top: 30px;
-    }
-    
-    .nav-link {
-        font-size: 2rem;
-    }
+  /* Réalignement header */
+  nav {
+    justify-content: space-between;
+  }
 
-    /* Ajustement titres */
-    .section-title {
-        font-size: 2.2rem;
-        margin-bottom: 30px;
-    }
-    
-    /* Stats panel sous la carte pour gagner de la place */
-    .fighter-section {
-        flex-direction: column;
-        gap: 50px; /* Plus d'espace entre chaque bloc combattant */
-    }
+  /* Navigation interne en colonne */
+  .naviguation {
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 30px;
+  }
+
+  .nav-link {
+    font-size: 2rem;
+  }
+
+  /* Ajustement titres */
+  .section-title {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+  }
+
+  /* Ajustement footer */
+  .container-footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* Stats panel sous la carte pour gagner de la place */
+  .fighter-section {
+    flex-direction: column;
+    gap: 50px; /* Plus d'espace entre chaque bloc combattant */
+  }
 }
+
