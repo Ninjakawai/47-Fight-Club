@@ -1,5 +1,11 @@
 /********GLOBAL********/
 @import url("https://fonts.googleapis.com/css2?family=Manufacturing+Consent&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+@font-face {
+  font-family: "Street-Fighter";
+  src: url("../font/SSF4_ABUKET.ttf");
+}
+
 * {
   font-family: "Montserrat", sans-serif;
   box-sizing: border-box;
@@ -190,7 +196,7 @@ main::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: url(../img/main-background.avif);
+  background: url(../img/profil_47FC.jpg);
   background-size: cover;
   background-position: center;
   opacity: 0;
@@ -267,6 +273,23 @@ section,
 footer {
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.title {
+  font-family: "Street-Fighter";
+  font-size: 45px;
+}
+
+.container-image {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  height: 20vh;
+}
+
+.container-image img {
+  max-height: 100%;
+  margin: 0.5rem 4rem;
 }
 
 /********STATS SECTION********/

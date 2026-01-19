@@ -12,8 +12,8 @@ let header = `      <div id="main"></div>
     <header>
       <nav>
         <div class="container-logo">
-          <img src="./img/logo.png" alt="Logo 47 Fight club." />
-          <a href="/" class="nav-title_links">47 Fight club</a>
+          <img src="./img/logo.png" alt="Logo 47 Fight Club." />
+          <a href="/" class="nav-title_links">47 Fight Club</a>
         </div>
         <a href="#open">
           <i class="fa-solid fa-bars header-burger_icon"></i>
@@ -32,7 +32,7 @@ let footer = `
       <nav>
         <div class="container-logo">
           <img src="./img/logo.png" alt="Logo 47 Fight club." />
-          <a href="/">47 Fight club</a>
+          <a href="/" class="nav-title_links">47 Fight club</a>
         </div>
         <ul>
           <li><a href="/histoire">Histoire</a></li>

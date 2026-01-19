@@ -14,11 +14,16 @@
   }
 }
 
+@font-face {
+  font-family: "Street-Fighter";
+  src: url("../font/SSF4_ABUKET.ttf");
+}
+
 /* HEADER */
 header {
   position: sticky;
   x: 0;
-  z-index: 2;
+  z-index: 5;
   height: 78px;
   border-bottom: 1px solid red;
   backdrop-filter: blur(10px);
@@ -43,6 +48,11 @@ header .link-btn_red {
   display: flex;
   flex-wrap: nowrap;
   text-align: center;
+}
+
+.nav-title_links {
+  font-family: "Street-Fighter" !important;
+  font-size: 30px !important;
 }
 
 /* HEADER MOBILE */
