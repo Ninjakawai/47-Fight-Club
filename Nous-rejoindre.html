@@ -58,12 +58,44 @@
           </div>
         </div>
         <div id="droiteHaut">
-          <iframe
-            width="400"
-            height="400"
-            src="https://www.openstreetmap.org/export/embed.html?bbox=0.6464338302612306%2C44.178310695927586%2C0.6820964813232422%2C44.1921436891349&amp;layer=mapnik"
-            style="border: 1px solid black"
-          ></iframe>
+          <div class="mapouter">
+            <div class="osm_canvas">
+              <iframe
+                width="425"
+                height="350"
+                id="osm_canvas"
+                src="about:blank"
+                frameborder="0"
+                scrolling="no"
+                marginheight="0"
+                marginwidth="0"
+              ></iframe>
+              <script>
+                document
+                  .getElementById("osm_canvas")
+                  .contentDocument.write(
+                    '<link rel = "stylesheet" href = "https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.min.css" />',
+                  );
+                document
+                  .getElementById("osm_canvas")
+                  .contentDocument.write(
+                    '<script src = "https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.min.js"><\/script>',
+                  );
+                document
+                  .getElementById("osm_canvas")
+                  .contentDocument.write(
+                    '<div id ="osm-map" style = "width:820px; height:560px;"></div>',
+                  );
+                document
+                  .getElementById("osm_canvas")
+                  .contentDocument.write(
+                    '<script>var mapOptions={center:[44.1836405, 0.6695354],zoom:17,attributionControl: true}; var map = new L.map("osm-map", mapOptions); map.attributionControl.setPrefix(\'&copy; <a target="_blank" href="https://www.openstreetmap.org/copyright" rel="nofollow noopener noreferrer">OpenStreetMap</a>\'); var layer = new L.TileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png");map.addLayer(layer);let marker = new L.Marker([44.1836405, 0.6695354]);marker.addTo(map).bindPopup(\'Rue Colette\'); marker.on(\'mouseover\',function(ev) {marker.openPopup();});<\/script>',
+                  );
+                document.getElementById("osm_canvas").contentDocument.close();
+              </script>
+              <br />
+            </div>
+          </div>
         </div>
       </section>
       <section id="bas">
