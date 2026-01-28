@@ -21,11 +21,11 @@
 
 /* HEADER */
 header {
-  position: sticky;
+  position: sticky !important;
   x: 0;
   z-index: 5;
   height: 78px;
-  border-bottom: 1px solid red;
+  border-bottom: 1px solid red !important;
   backdrop-filter: blur(10px);
   background-color: black;
   display: flex;
@@ -34,6 +34,8 @@ header {
 }
 
 header a {
+  min-height: 25px;
+  min-width: 25px;
   font-size: 18px;
   color: #fff;
   transition: 200ms;
@@ -52,7 +54,7 @@ header .link-btn_red {
 
 .nav-title_links {
   font-family: "Street-Fighter" !important;
-  font-size: 30px !important;
+  font-size: 25px !important;
 }
 
 /* HEADER MOBILE */
