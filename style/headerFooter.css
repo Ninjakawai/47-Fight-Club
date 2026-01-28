@@ -1,7 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Manufacturing+Consent&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
 @media only screen and (orientation: portrait) and (max-width: 479px){
   .header-mobile {
     content-visibility: visible !important;
     display: block;
+  }
+
+  .header-burger_icon {
+    content-visibility: visible !important;
+    display: block;
+  }
+
+  #sommaire-header {
+    display: none !important;
   }
 
   footer {
@@ -30,6 +41,10 @@
   src: url("../font/SSF4_ABUKET.ttf");
 }
 
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
 /* HEADER */
 header {
   position: sticky !important;
@@ -52,9 +67,21 @@ header a {
   transition: 200ms;
 }
 
+header a i {
+  min-width: 25px;
+  min-height: 25px;
+}
+
 header ul {
   display: flex;
   flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+}
+
+nav ul li a:hover{
+  transform: translateY(-5px);
+  border-bottom: solid 5px red;
 }
 
 header .link-btn_red {
@@ -123,10 +150,12 @@ footer {
   padding: 0 2em 50px;
   min-height: 152px;
   margin-top: 1em;
-  max-width: none !important;
+  max-width: 100% !important;
 }
 
 footer nav {
+  display: flex;
+  flex-wrap: wrap;
   width: 90%;
   align-self: center;
 }
@@ -134,6 +163,9 @@ footer nav {
 footer ul {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
 }
 
 footer a {

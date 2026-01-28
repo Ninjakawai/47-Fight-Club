@@ -6,7 +6,7 @@ let header = `      <div id="main"></div>
           <li><a href="/">Accueil</a></li>
           <li><a href="/histoire">Histoire</a></li>
           <li><a href="/contact">Contact</a></li>
-          <li><a href="/nous- rejoindre" class="link-btn_red">Nous rejoindre</a></li>
+          <li><a href="/nous-rejoindre" class="link-btn_red">Nous rejoindre</a></li>
         </ul>
     </div>
     <header>
@@ -18,7 +18,7 @@ let header = `      <div id="main"></div>
         <a href="#open">
           <i class="fa-solid fa-bars header-burger_icon"></i>
         </a>
-        <ul>
+        <ul id="sommaire-header">
           <li><a href="/">Accueil</a></li>
           <li><a href="/histoire">Histoire</a></li>
           <li><a href="/contact">Contact</a></li>

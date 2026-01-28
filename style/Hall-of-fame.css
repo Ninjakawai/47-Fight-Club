@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Manufacturing+Consent&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
 /* =========================================
    1. RESET & CONFIGURATION GLOBALE
    ========================================= */
@@ -12,14 +14,13 @@ html {
 }
 
 body {
-  font-family: "Arial Black", Arial, sans-serif;
+  font-family: "Montserrat", sans-serif;
   /* Fond sombre dégradé rouge/noir */
-  background: linear-gradient(135deg, #0f0000 0%, #240000 100%);
+  background-color: black;
   min-height: 100vh;
   /* STRUCTURE FLEX VERTICALE : Essentiel pour que le Header reste en haut */
   display: flex;
   flex-direction: column;
-  color: white;
 }
 
 /* Le main prend tout l'espace disponible pour pousser le footer en bas */
@@ -33,28 +34,11 @@ main {
 
 a {
   text-decoration: none;
-  color: inherit;
+  color: white;
 }
 
 ul {
   list-style: none;
-}
-
-/* =========================================
-   2. HEADER & NAVIGATION PRINCIPALE
-   ========================================= */
-header {
-  z-index: 100; /* Au-dessus du contenu, mais sous le menu mobile */
-  background-color: black;
-  position: sticky; /* Reste collé en haut */
-  top: 0;
-  height: 80px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-bottom: 2px solid #ff1a1a;
-  box-shadow: 0 4px 15px rgba(255, 0, 0, 0.2);
 }
 
 nav {
@@ -81,33 +65,8 @@ nav {
 
 .nav-title_links {
   color: #ff1a1a;
-  font-weight: 900;
   font-size: 24px;
   text-transform: uppercase;
-}
-
-/* Menu Desktop */
-nav ul {
-  display: flex;
-  gap: 40px;
-  align-items: center;
-}
-
-nav ul li a {
-  color: white;
-  font-size: 16px;
-  font-weight: bold;
-  padding-bottom: 5px;
-  border-bottom: 3px solid transparent;
-  transition: all 0.3s ease;
-  text-transform: uppercase;
-}
-
-nav ul li a:hover {
-  color: #ff1a1a;
-  border-bottom-color: #ff1a1a;
-  transform: translateY(-3px);
-  text-shadow: 0 0 10px rgba(255, 26, 26, 0.5);
 }
 
 /* Bouton Rouge "Rejoindre" */
@@ -199,20 +158,16 @@ nav ul li a:hover {
 .nav-link {
   text-decoration: none;
   font-size: 2.5rem;
-  font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 2px;
   position: relative;
-  transition: all 0.3s ease;
+  color: white;
 
   /* Effet contour blanc texte transparent */
-  color: transparent;
-  -webkit-text-stroke: 2px white;
 }
 
 .nav-link:hover {
   color: #ff1a1a;
-  -webkit-text-stroke: 0px; /* Enlève le contour */
   text-shadow: 0 0 25px rgba(255, 26, 26, 0.9);
   transform: scale(1.1);
 }
@@ -311,9 +266,8 @@ nav ul li a:hover {
   left: 0;
   right: 0;
   text-align: center;
-  color: #ff1a1a; /* Nom en ROUGE */
+  color: white  ;
   font-size: 28px;
-  font-weight: 900;
   text-transform: uppercase;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
   letter-spacing: 1px;
@@ -346,7 +300,6 @@ nav ul li a:hover {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: all 0.3s ease;
   box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.6);
   z-index: 2;
   border: 2px solid transparent;
@@ -380,11 +333,10 @@ nav ul li a:hover {
   opacity: 0;
   width: 0;
   overflow: hidden;
-  transition: all 0.4s ease;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
   margin-left: -25px; /* Chevauchement */
   position: relative;
-  z-index: 2;
+  z-index: 1;
 }
 
 .social-item:hover .social-username {
@@ -471,7 +423,6 @@ nav ul li a:hover {
   z-index: 90; /* Sous le header mobile (2000) mais sur le contenu */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
   border: 2px solid white;
-  transition: all 0.3s ease;
 }
 
 .back-to-top i {
@@ -507,7 +458,7 @@ footer {
 footer .line {
   height: 2px;
   width: 100%;
-  background-color: #333; /* Ligne grise subtile */
+  background-color: black; /* Ligne grise subtile */
 }
 
 .container-footer {
@@ -536,7 +487,6 @@ footer .line {
 
 .container-footer_links i {
   color: white;
-  transition: color 0.3s;
 }
 
 .container-footer_links i:hover {

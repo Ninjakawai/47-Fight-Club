@@ -1,3 +1,18 @@
 V1 : mise sur le teams de tout les fichiers
 
 V1.1 : correction css header et footers responsifs et lien vers la page "nous rejoindre" 
+
+V1.2 : correction header mobile sur la page histoire 
+(headerfooter.css)
+
+V1.3 : ajout des images et correction des balises "title" pour toutes les pages, et modification du CSS Hall of Fame, HeaderFooter et Histoire, ainsi que le JS du headerFooter
+(headerFooter.js)
+(hall-of-fame.css)
+(headerFooter.css)
+(histoire.css)
+(contact.html)
+(don.html)
+(erreur-404.html)
+(hall-of-fame.html)
+(histoire.html)
+(nous-rejoindre.html)

@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Street-Fighter";
+  src: url("../font/SSF4_ABUKET.ttf");
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -12,6 +17,10 @@ body {
   justify-content: center;
   font-size: 3rem;
   color: red;
+}
+
+#titre h1 {
+  font-family: "Street-Fighter", sans-serif !important;
 }
 
 #animation {
@@ -51,7 +60,7 @@ body {
 }
 
 .photo {
-  background-image: url("../img/profil_47FC.jpg");
+  background-image: url("../img/photoFondHistoire.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-position-x: center;
@@ -82,10 +91,11 @@ body {
 
 .divTextCoach {
   border-radius: 20px;
-  background-color: #ff000062;
-  padding: 10vh;
+  background-color: #ff00009d;
+  padding: 4vh;
   line-height: normal;
   width: 70%;
+  text-align: center;
 }
 
 .photoCadre {
@@ -439,5 +449,14 @@ footer .line {
   .contact,
   .calendar {
     flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  #titre h1{
+    font-size: 2rem !important;
+  }
+  .photo {
+    background-image: none;
   }
 }
