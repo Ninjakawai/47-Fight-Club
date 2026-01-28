@@ -1,0 +1,3 @@
+V1 : mise sur le teams de tout les fichiers
+
+V1.1 : correction css header et footers responsifs et lien vers la page "nous rejoindre" 

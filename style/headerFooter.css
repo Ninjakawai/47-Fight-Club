@@ -1,16 +1,27 @@
 @media only screen and (orientation: portrait) and (max-width: 479px){
   .header-mobile {
     content-visibility: visible !important;
+    display: block;
+  }
+
+  footer {
+    padding: 0 0 50px !important;
+  }
+
+  footer ul {
+    gap: 20px !important;
   }
 }
 
 @media not screen and not (orientation: portrait) and (max-width: 479px){
   .header-mobile {
     content-visibility: hidden !important;
+    display: none;
   }
 
   .header-burger_icon {
     content-visibility: hidden !important;
+    display: none;
   }
 }
 
@@ -23,7 +34,7 @@
 header {
   position: sticky !important;
   x: 0;
-  z-index: 5;
+  z-index: 4;
   height: 78px;
   border-bottom: 1px solid red !important;
   backdrop-filter: blur(10px);
@@ -96,10 +107,6 @@ header .link-btn_red {
   font-size: 35px;
 }
 
-.header-burger_icon {
-  display: none !important;
-}
-
 /* FOOTER */
 
 footer {
@@ -109,8 +116,9 @@ footer {
   flex-direction: column;
   gap: 15px;
   padding: 0 2em 50px;
-  height: 152px;
+  min-height: 152px;
   margin-top: 1em;
+  max-width: none !important;
 }
 
 footer nav {
