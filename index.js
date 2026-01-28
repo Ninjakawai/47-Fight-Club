@@ -18,7 +18,7 @@ app.get("/histoire", (req, res) => {
   res.sendFile(path.join(__dirname + "/histoire.html"));
 });
 
-app.get("/rejoindre", (req, res) => {
+app.get("/nous-rejoindre", (req, res) => {
   res.sendFile(path.join(__dirname + "/nous-rejoindre.html"));
 });
 
