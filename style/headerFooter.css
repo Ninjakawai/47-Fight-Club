@@ -70,6 +70,7 @@ header nav li a {
 header a i {
   min-width: 25px;
   min-height: 25px;
+  color: #f00;
 }
 
 header ul {

@@ -1,6 +1,11 @@
 /********GLOBAL********/
 @import url("https://fonts.googleapis.com/css2?family=Manufacturing+Consent&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
+@font-face {
+  font-family: "Street-Fighter";
+  src: url("../font/SSF4_ABUKET.ttf");
+}
+
 * {
   font-family: "Montserrat", sans-serif;
   box-sizing: border-box;
@@ -248,7 +253,7 @@ main,
 main h1,
 .nav-title_links,
 footer .container-logo a {
-  font-family: "Manufacturing Consent", system-ui;
+  font-family: "Street-Fighter", system-ui;
 }
 
 main h1 {
