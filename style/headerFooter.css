@@ -8,7 +8,7 @@
 
   .header-burger_icon {
     content-visibility: visible !important;
-    display: block;
+    display: block !important;
   }
 
   #sommaire-header {
@@ -50,7 +50,7 @@ header {
   position: sticky !important;
   x: 0;
   z-index: 4;
-  height: 78px;
+  min-height: 78px;
   border-bottom: 1px solid red !important;
   backdrop-filter: blur(10px);
   background-color: black;
@@ -59,7 +59,7 @@ header {
   justify-content: center;
 }
 
-header a {
+header nav li a {
   min-height: 25px;
   min-width: 25px;
   font-size: 18px;
@@ -151,6 +151,7 @@ footer {
   min-height: 152px;
   margin-top: 1em;
   max-width: 100% !important;
+  border-top: 1px solid red;
 }
 
 footer nav {

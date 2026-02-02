@@ -67,4 +67,13 @@
   .contact {
     flex-direction: column;
   }
+
+  .mapouter {
+    text-align: left;
+  }
+
+  #osm_canvas {
+    width: 90vw !important;
+    height: 74vw !important;
+  }
 }

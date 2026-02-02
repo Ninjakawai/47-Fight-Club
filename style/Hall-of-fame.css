@@ -97,7 +97,6 @@ nav {
 .header-burger_icon {
   display: none; /* Caché sur PC */
   font-size: 30px;
-  color: white;
   cursor: pointer;
 }
 

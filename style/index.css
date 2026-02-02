@@ -60,6 +60,13 @@ footer nav ul li a {
   justify-content: start;
 }
 
+.mapouter {
+  position: relative;
+  text-align: right;
+  max-height: 560px;
+  max-width: 820px;
+}
+
 .header-mobile:target {
   display: flex;
 }

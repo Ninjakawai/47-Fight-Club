@@ -1,9 +1,31 @@
 @import url("https://fonts.googleapis.com/css2?family=Manufacturing+Consent&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 @media only screen and (orientation: portrait) and (max-width: 479px){
-  .header-mobile {
-    content-visibility: visible !important;
-    display: flex !important;
+  #events {
+    flex-direction: column !important;
+    align-content: center !important;
+  }
+
+  #calendar {
+    width: 95% !important;
+  }
+
+  .fc-toolbar-title {
+    font-size: larger !important;
+    padding: 0.5rem !important;
+  }
+
+  .fc-button {
+    padding: 0.2em 0.2em !important;
+    font-size: 16px !important;
+  }
+
+  .fc-header-toolbar {
+    padding: 0 !important;
+  }
+
+  #evtImg {
+    height: 28vh !important;
   }
 }
 
@@ -23,6 +45,7 @@ html {
 body {
   background-color: black;
   color: #fff;
+  width: 100vw;
 }
 
 /* GLOBAL */
@@ -172,12 +195,12 @@ summary {
 }
 
 #calendar {
-  width: 70rem;
-  height: 120%;
+  width: 60%;
+  min-height: 480px;
 }
 
 #evt {
-  width: 35rem;
+  min-width: 35%;
   padding: 1rem 0;
 }
 
