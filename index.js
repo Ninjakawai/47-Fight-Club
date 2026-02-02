@@ -19,7 +19,7 @@ app.get("/histoire", (req, res) => {
 });
 
 app.get("/nous-rejoindre", (req, res) => {
-  res.sendFile(path.join(__dirname + "/nous-rejoindre.html"));
+  res.sendFile(path.join(__dirname + "/contact.html"));
 });
 
 app.get("/hall-of-fame", (req, res) => {

@@ -5,7 +5,7 @@ let header = `      <div id="main"></div>
       <ul>
           <li><a href="/">Accueil</a></li>
           <li><a href="/histoire">Histoire</a></li>
-          <li><a href="/contact">Contact</a></li>
+          <li><a href="/hall-of-fame">Hall of fame</a></li>
           <li><a href="/nous-rejoindre" class="link-btn_red">Nous rejoindre</a></li>
         </ul>
     </div>
@@ -21,8 +21,8 @@ let header = `      <div id="main"></div>
         <ul id="sommaire-header">
           <li><a href="/">Accueil</a></li>
           <li><a href="/histoire">Histoire</a></li>
-          <li><a href="/contact">Contact</a></li>
-          <li><a href="/nous-rejoindre" class="link-btn_red">Nous rejoindre</a></li>
+          <li><a href="/don">Don</a></li>
+          <li><a href="/contact" style="background-color: #ff0004; margin-bottom: 5px; border: none; border-radius: 10px; padding: 10px 15px; cursor: pointer;">Nous rejoindre</a></li>
         </ul>
       </nav>
     </header>`;
@@ -36,7 +36,6 @@ let footer = `
         </div>
         <ul>
           <li><a href="/histoire">Histoire</a></li>
-          <li><a href="/nous-rejoindre">Nous rejoindre</a></li>
           <li><a href="/hall-of-fame">Hall of fame</a></li>
           <li><a href="/calendrier">Evènements</a></li>
           <li><a href="/contact">Contact</a></li>
