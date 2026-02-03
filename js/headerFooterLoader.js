@@ -5,8 +5,8 @@ let header = `      <div id="main"></div>
       <ul>
           <li><a href="index.html">Accueil</a></li>
           <li><a href="histoire.html">Histoire</a></li>
-          <li><a href="contact.html">Hall of fame</a></li>
-          <li><a href="nous-rejoindre.html" class="link-btn_red">Nous rejoindre</a></li>
+          <li><a href="hall-of-fame.html">Hall of fame</a></li>
+          <li><a href="contact.html" class="link-btn_red">Nous rejoindre</a></li>
         </ul>
     </div>
     <header>
