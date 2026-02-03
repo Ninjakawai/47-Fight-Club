@@ -3,26 +3,26 @@ let header = `      <div id="main"></div>
     <div class="header-mobile" id="open">
       <nav><a style="color: #ff0004;"  href="#close"><i class="fa-solid fa-x"></i></a></nav>
       <ul>
-          <li><a href="/">Accueil</a></li>
-          <li><a href="/histoire">Histoire</a></li>
-          <li><a href="/hall-of-fame">Hall of fame</a></li>
-          <li><a href="/nous-rejoindre" class="link-btn_red">Nous rejoindre</a></li>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="histoire.html">Histoire</a></li>
+          <li><a href="hall-of-fame.html">Hall of fame</a></li>
+          <li><a href="nous-rejoindre.html" class="link-btn_red">Nous rejoindre</a></li>
         </ul>
     </div>
     <header>
       <nav>
         <div class="container-logo">
           <img src="./img/logo.png" alt="Logo 47 Fight Club." />
-          <a href="/" class="nav-title_links">47 Fight Club</a>
+          <a href="index.html" class="nav-title_links">47 Fight Club</a>
         </div>
         <a href="#open">
           <i class="fa-solid fa-bars header-burger_icon"></i>
         </a>
         <ul id="sommaire-header">
-          <li><a href="/">Accueil</a></li>
-          <li><a href="/histoire">Histoire</a></li>
-          <li><a href="/don">Don</a></li>
-          <li><a href="/contact" style="background-color: #ff0004; margin-bottom: 5px; border: none; border-radius: 10px; padding: 10px 15px; cursor: pointer;">Nous rejoindre</a></li>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="histoire.html">Histoire</a></li>
+          <li><a href="don.html">Don</a></li>
+          <li><a href="contact.html" style="background-color: #ff0004; margin-bottom: 5px; border: none; border-radius: 10px; padding: 10px 15px; cursor: pointer;">Nous rejoindre</a></li>
         </ul>
       </nav>
     </header>`;
@@ -32,14 +32,14 @@ let footer = `
       <nav>
         <div class="container-logo">
           <img src="./img/logo.png" alt="Logo 47 Fight club." />
-          <a href="/" class="nav-title_links">47 Fight club</a>
+          <a href="index.html" class="nav-title_links">47 Fight club</a>
         </div>
         <ul>
-          <li><a href="/histoire">Histoire</a></li>
-          <li><a href="/hall-of-fame">Hall of fame</a></li>
-          <li><a href="/calendrier">Evènements</a></li>
-          <li><a href="/contact">Contact</a></li>
-          <li><a href="/don">Don</a></li>
+          <li><a href="histoire.html">Histoire</a></li>
+          <li><a href="hall-of-fame.html">Hall of fame</a></li>
+          <li><a href="calendrier.html">Evènements</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="don.html">Don</a></li>
         </ul>
       </nav>
       <div class="line"></div>
